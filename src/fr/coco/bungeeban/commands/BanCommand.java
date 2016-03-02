@@ -32,7 +32,7 @@ public class BanCommand extends Command {
         } else if (commandSender instanceof ProxiedPlayer) {
 
             ProxiedPlayer player = (ProxiedPlayer) commandSender;
-            //if (BanUtils.getInstance().isBanned(player)) player.sendMessage(new TextComponent("§cDebug"));
+
             if (player.hasPermission("bb.ban")) {
 
                 if (strings.length < 3) {
@@ -46,7 +46,11 @@ public class BanCommand extends Command {
                     if (target.hasPermission("bb.noban")) {
                         player.sendMessage(new TextComponent("§cError : You can't ban this player"));
                         return;
-                    } else {
+                    }
+                    if(BanUtils.getInstance().isBanned(player)){
+                        player.sendMessage(new TextComponent("§cError : This player is already banned"));
+                    }
+                    else {
 
                         if (strings[1].equalsIgnoreCase("permanent")) {
 

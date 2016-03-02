@@ -26,8 +26,8 @@ public class Ban {
 
 
 
-            if(BanUtils.getInstance().isBanned(player)) return;
 
+            if(BanUtils.getInstance().isBanned(player)) return;
             PreparedStatement sql = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("INSERT INTO ban " + "(UUID, NAME, TIME, REASON) VALUES (?, ?, ?, ?) ");
             sql.setString(1, player.getUniqueId().toString());
             sql.setString(2, player.getName());
@@ -41,9 +41,7 @@ public class Ban {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            BungeeBan.getInstance().getDataBase().disconnection();
         }
-        BungeeBan.getInstance().getDataBase().disconnection();
     }
 
     public ProxiedPlayer getPlayer() {

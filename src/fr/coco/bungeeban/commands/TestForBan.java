@@ -22,7 +22,6 @@ public class TestForBan extends Command {
 
         ProxiedPlayer player = (ProxiedPlayer) commandSender;
         player.sendMessage(String.valueOf(BanUtils.getInstance().isBanned(player)));
-        player.sendMessage(BanUtils.getInstance().id + "");
     }
 
 

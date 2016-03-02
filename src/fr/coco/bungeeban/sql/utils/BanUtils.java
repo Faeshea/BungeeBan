@@ -15,7 +15,7 @@ import java.util.UUID;
 public class BanUtils {
 
     public int id;
-    private PreparedStatement sts1 = null;
+    private PreparedStatement sts1;
 
     private static BanUtils ourInstance = new BanUtils();
 
@@ -62,24 +62,28 @@ public class BanUtils {
         try {
 
 
-             sts1 = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("SELECT UUID FROM ban WHERE NAME = ? ");
+             sts1 = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("SELECT * FROM ban WHERE UUID = ?");
+
+
             sts1.setString(1, player.getUniqueId().toString());
             sts1.execute();
-            sts1.close();
+            player.sendMessage(player.getUniqueId().toString());
 
 
-            ResultSetMetaData resultSetMetaData1 = sts1.getMetaData();
+
             ResultSet resultSet1 = sts1.getResultSet();
-            if (!sts1.getResultSet().next()) {
-                return false;
-            } else {
-                String string = resultSet1.getString("UUID");
-                if (string == null) {
-                    return false;
-                } else {
-                    return true;
-                }
+
+
+            while (resultSet1.next()) {
+                player.sendMessage("Vous êtes ban !");
+                sts1.close();
+                return true;
             }
+            player.sendMessage("Vous n'êtes pas ban !");
+            sts1.close();
+            return false;
+
+
 
 
 
@@ -88,7 +92,11 @@ public class BanUtils {
 
         }
 
-
+        try {
+            sts1.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return false;
 
 

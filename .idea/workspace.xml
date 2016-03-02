@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35f8af40-6d6d-4b6c-b3c2-9686c62b1919" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/TestForBan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/BungeeBan.class" afterPath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/BungeeBan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/commands/BanCommand.class" afterPath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/commands/BanCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/sql/SqlUtils.class" afterPath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/sql/SqlUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/sql/utils/Ban.class" afterPath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/sql/utils/Ban.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/sql/utils/BanUtils.class" afterPath="$PROJECT_DIR$/out/production/Plugin/fr/coco/bungeeban/sql/utils/BanUtils.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/coco/bungeeban/BungeeBan.java" afterPath="$PROJECT_DIR$/src/fr/coco/bungeeban/BungeeBan.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/BanCommand.java" afterPath="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/BanCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/SqlUtils.java" afterPath="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/SqlUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/TestForBan.java" afterPath="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/TestForBan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/Ban.java" afterPath="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/Ban.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/BanUtils.java" afterPath="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/BanUtils.java" />
     </list>
     <ignored path="Plugin.iws" />
@@ -33,14 +30,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BungeeBan.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BungeeBan.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/BungeeBan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.073196985">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/commands/TestForBan.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#360#361#0" expanded="true" />
@@ -63,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/sql/SqlUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,15 +66,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BanUtils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BanUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/BanUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27478448">
-              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2489#2490#0" expanded="true" />
-                <element signature="e#2514#2515#0" expanded="true" />
+                <element signature="e#2525#2526#0" expanded="true" />
+                <element signature="e#2550#2551#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,13 +84,12 @@
         <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/Ban.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1461#1462#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
-                <element signature="e#1552#1553#0" expanded="true" />
+                <element signature="e#1331#1332#0" expanded="true" />
+                <element signature="e#1360#1361#0" expanded="true" />
+                <element signature="e#1393#1394#0" expanded="true" />
+                <element signature="e#1422#1423#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/commands/BanCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+              <caret line="42" column="98" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -143,12 +137,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/plugin.yml" />
         <option value="$PROJECT_DIR$/../AllCraft/src/fr/allcraft/utils/Config.java" />
-        <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/BanCommand.java" />
         <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/SqlUtils.java" />
-        <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/BungeeBan.java" />
-        <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/TestForBan.java" />
         <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/Ban.java" />
         <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/BanUtils.java" />
+        <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/TestForBan.java" />
+        <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/commands/BanCommand.java" />
+        <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/events/OnPlayerProxyPreLoginEvent.java" />
+        <option value="$PROJECT_DIR$/src/fr/coco/bungeeban/BungeeBan.java" />
       </list>
     </option>
   </component>
@@ -324,6 +319,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="fr.coco.bungeeban.events" />
       <recent name="fr.coco.bungeeban.commands" />
     </key>
   </component>
@@ -611,16 +607,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0062305294" sideWeight="0.46588486" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0072689513" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0062305294" sideWeight="0.53411514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0072689513" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2595949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -661,9 +657,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -691,8 +685,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2489#2490#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -717,9 +711,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -747,8 +739,8 @@
           <caret line="87" column="107" selection-start-line="87" selection-start-column="107" selection-end-line="87" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2489#2490#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -773,9 +765,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -803,8 +793,8 @@
           <caret line="87" column="107" selection-start-line="87" selection-start-column="107" selection-end-line="87" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2489#2490#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -829,9 +819,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -859,8 +847,8 @@
           <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2489#2490#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -896,14 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/commands/BanCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9615384">
@@ -912,12 +892,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/BungeeBan.java">
+    <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/Ban.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1360#1361#0" expanded="true" />
+            <element signature="e#1393#1394#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/commands/BanCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="98" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/BanUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -925,23 +928,9 @@
     <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/sql/SqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/Ban.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1461#1462#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -949,7 +938,7 @@
     <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/commands/TestForBan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#360#361#0" expanded="true" />
@@ -958,15 +947,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/sql/utils/BanUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/fr/coco/bungeeban/BungeeBan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27478448">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2489#2490#0" expanded="true" />
-            <element signature="e#2514#2515#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.073196985">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
