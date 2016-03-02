@@ -21,7 +21,7 @@ public class BungeeBan extends Plugin {
    public void onEnable() 
 
         ourInstance = this;
-        sqlUtils = new SqlUtils("localhost", "test", "root", "","test" )
+        sqlUtils = new SqlUtils("localhost", "root", "", "test", "test");
 
        
         PluginManager pm = ProxyServer.getInstance().getPluginManager();
