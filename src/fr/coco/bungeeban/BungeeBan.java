@@ -1,6 +1,7 @@
 package fr.coco.bungeeban;
 
 import fr.coco.bungeeban.commands.BanCommand;
+import fr.coco.bungeeban.commands.TestForBan;
 import fr.coco.bungeeban.sql.SqlUtils;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -18,12 +19,12 @@ public class BungeeBan extends Plugin {
 
     @Override
     public void onEnable() {
-        SqlUtils sqlUtilss = new SqlUtils("gameurseirsite.mysql.db", "gameurseirsite", "Az026cb56", "gameurseirsite", "ban");
-        sqlUtils = new SqlUtils("sql.ovh.net", "gameurseirsite", "Az026cb56", "gameurseirsite", "ban");
+        sqlUtils = new SqlUtils("localhost", "root", "password", "ban", "ban");
         ourInstance = this;
         sqlUtils.connection();
         PluginManager pm = ProxyServer.getInstance().getPluginManager();
         pm.registerCommand(this, new BanCommand("ban"));
+        pm.registerCommand(this, new TestForBan("tfb"));
     }
 
     public static BungeeBan getInstance() {
@@ -31,8 +32,8 @@ public class BungeeBan extends Plugin {
     }
 
 
-    public SqlUtils getDataBase(){
-        return  sqlUtils;
+    public SqlUtils getDataBase() {
+        return sqlUtils;
     }
 
 

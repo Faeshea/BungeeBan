@@ -38,14 +38,15 @@ public class SqlUtils {
             e.printStackTrace();
         }
     }
-    public boolean isConnected(){
+
+    public boolean isConnected() {
         try {
-            if(connection == null || connection.isValid(5) || connection.isClosed()){
+            if (connection == null || connection.isValid(5) || connection.isClosed()) {
                 return false;
-            }else{
+            } else {
                 return true;
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return false;

@@ -1,5 +1,6 @@
 package fr.coco.bungeeban.commands;
 
+import fr.coco.bungeeban.sql.utils.Ban;
 import fr.coco.bungeeban.sql.utils.BanUtils;
 import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.api.CommandSender;
@@ -16,6 +17,7 @@ import net.md_5.bungee.command.ConsoleCommandSender;
  */
 public class BanCommand extends Command {
 
+
     public BanCommand(String name) {
         super(name);
     }
@@ -28,11 +30,13 @@ public class BanCommand extends Command {
 
 
         } else if (commandSender instanceof ProxiedPlayer) {
+
             ProxiedPlayer player = (ProxiedPlayer) commandSender;
+            //if (BanUtils.getInstance().isBanned(player)) player.sendMessage(new TextComponent("§cDebug"));
             if (player.hasPermission("bb.ban")) {
 
-                if (strings.length < 2) {
-                    player.sendMessage(new TextComponent("§cError : /ban <Player> <Reason<"));
+                if (strings.length < 3) {
+                    player.sendMessage(new TextComponent("§cError : /ban <Player> <time in hours or permanent> <Reason>"));
                 } else {
                     ProxiedPlayer target = ProxyServer.getInstance().getPlayer(strings[0]);
                     if (target == null) {
@@ -42,23 +46,24 @@ public class BanCommand extends Command {
                     if (target.hasPermission("bb.noban")) {
                         player.sendMessage(new TextComponent("§cError : You can't ban this player"));
                         return;
+                    } else {
+
+                        if (strings[1].equalsIgnoreCase("permanent")) {
+
+                            StringBuilder str = new StringBuilder();
+                            for (int i = 2; strings.length > i; i++) {
+                                str.append(strings[i] + " ");
+
+                            }
+
+                            new Ban(target, str.toString());
+
+                        } else {
+
+                        }
+
+
                     }
-
-                    if(strings[1].equalsIgnoreCase("permanent")){
-
-                        StringBuilder str = new StringBuilder();
-                               for(int i = 1; strings.length > i; i++){
-                                   str.append(strings[i] + " ");
-
-                               }
-
-
-                        BanUtils.getInstance().banPlayer(target, str.toString());
-                    }else{
-
-                    }
-
-
                 }
 
 
