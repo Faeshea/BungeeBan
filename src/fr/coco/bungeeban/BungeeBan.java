@@ -8,7 +8,8 @@ import net.md_5.bungee.api.plugin.PluginManager;
 
 /**
  * Created by coco33910 on 22/02/2016.
- * BungeeBan
+ * BungeeBan 
+* correction de certaines lignes. 
  */
 public class BungeeBan extends Plugin {
 
@@ -17,11 +18,12 @@ public class BungeeBan extends Plugin {
 
 
     @Override
-    public void onEnable() {
-        SqlUtils sqlUtilss = new SqlUtils("gameurseirsite.mysql.db", "gameurseirsite", "Az026cb56", "gameurseirsite", "ban");
-        sqlUtils = new SqlUtils("sql.ovh.net", "gameurseirsite", "Az026cb56", "gameurseirsite", "ban");
+   public void onEnable() 
+
         ourInstance = this;
-        sqlUtils.connection();
+        sqlUtils = new SqlUtils("localhost", "test", "root", "","test" )
+
+       
         PluginManager pm = ProxyServer.getInstance().getPluginManager();
         pm.registerCommand(this, new BanCommand("ban"));
     }
@@ -29,7 +31,6 @@ public class BungeeBan extends Plugin {
     public static BungeeBan getInstance() {
         return ourInstance;
     }
-
 
     public SqlUtils getDataBase(){
         return  sqlUtils;
