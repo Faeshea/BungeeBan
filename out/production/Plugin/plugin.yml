@@ -1,7 +1,7 @@
 name: Ban
 version: 1
 main: fr.coco.bungeeban.BungeeBan
-author: coco33920
+author: coco33920 and Faeshea
 commands:
   ban:
   tfb:
