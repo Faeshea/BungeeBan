@@ -1,26 +1,25 @@
 package fr.coco.bungeeban.sql.utils;
 
 import fr.coco.bungeeban.BungeeBan;
-import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.UUID;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
- * Created by coco33910 on 22/02/2016.
- * BanUtils
+ * Created by coco33910 on 22/04/2016.
+ * MuteUtils
  */
-public class BanUtils {
+public class MuteUtils {
 
     public int id;
     private PreparedStatement sts1;
 
-    private static BanUtils ourInstance = new BanUtils();
+    private static MuteUtils ourInstance = new MuteUtils();
 
-    public static BanUtils getInstance() {
+    public static MuteUtils getInstance() {
         return ourInstance;
     }
 
@@ -51,29 +50,29 @@ public class BanUtils {
     }
 
 
-    public void unBanPlayer(OfflinePlayer player) {
+        public void unMutePlayer(OfflinePlayer player) {
 
-        try {
-            sts1 = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("DELETE FROM `ban`.`ban` WHERE `ban`.`UUID` = ?");
+            try {
+                sts1 = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("DELETE FROM `mute`.`mute` WHERE `mute`.`UUID` = ?");
 
-            sts1.setString(1, player.getUniqueId().toString());
+                sts1.setString(1, player.getUniqueId().toString());
 
-            sts1.execute();
-
-
+                sts1.execute();
 
 
 
 
 
-        }catch (SQLException e){
+
+
+            }catch (SQLException e){
             e.printStackTrace();
         }
 
 
     }
 
-    public boolean isBanned(Player player) {
+    public boolean isMuted(Player player) {
         if (BungeeBan.getInstance().getDataBase().getConnection() == null) {
             return false;
         }
@@ -81,7 +80,7 @@ public class BanUtils {
         try {
 
 
-             sts1 = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("SELECT * FROM ban WHERE UUID = ?");
+            sts1 = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("SELECT * FROM mute WHERE UUID = ?");
 
 
             sts1.setString(1, player.getUniqueId().toString());
@@ -119,7 +118,7 @@ public class BanUtils {
 
     }
 
-    public String getReasonPlayerBan(Player player) {
+    public String getReasonPlayerMute(Player player) {
         String str = "";
 
         if (BungeeBan.getInstance().getDataBase().getConnection() == null) {
@@ -127,7 +126,7 @@ public class BanUtils {
         }
 
         try {
-            sts1 = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("SELECT REASON FROM ban WHERE UUID = ?");
+            sts1 = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("SELECT REASON FROM mute WHERE UUID = ?");
 
             sts1.setString(1, player.getUniqueId().toString());
 
@@ -147,7 +146,14 @@ public class BanUtils {
 
 
         return str;
+    }
+    public MuteUtils(){
+
+    }
+
+
+
 }
 
 
-}
+

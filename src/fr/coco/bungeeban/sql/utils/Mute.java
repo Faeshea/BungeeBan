@@ -1,23 +1,23 @@
 package fr.coco.bungeeban.sql.utils;
 
+
 import fr.coco.bungeeban.BungeeBan;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * Created by coco33910 on 02/03/2016.
- * Ban
+ * Created by coco33910 on 22/04/2016.
+ * Mute
  */
-public class Ban {
+public class Mute {
 
     private Player player;
     private String reason;
 
 
-    public Ban(Player player, String reason) {
+    public Mute(Player player, String reason) {
         this.player = player;
         this.reason = reason;
         try {
@@ -26,9 +26,8 @@ public class Ban {
 
 
 
-
-            if(BanUtils.getInstance().isBanned(player)) return;
-            PreparedStatement sql = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("INSERT INTO ban " + "(UUID, NAME, TIME, REASON) VALUES (?, ?, ?, ?) ");
+            if(fr.coco.bungeeban.sql.utils.MuteUtils.getInstance().isMuted(player)) return;
+            PreparedStatement sql = BungeeBan.getInstance().getDataBase().getConnection().prepareStatement("INSERT INTO mute " + "(UUID, NAME, TIME, REASON) VALUES (?, ?, ?, ?) ");
             sql.setString(1, player.getUniqueId().toString());
             sql.setString(2, player.getName());
 
@@ -36,7 +35,7 @@ public class Ban {
             sql.setString(4, reason);
             sql.execute();
             sql.close();
-            player.kickPlayer("§cVous avez été banni définitivement pour " + reason.replace("&", "§"));
+            player.sendMessage("§cVous avez été muté définitivement pour " + reason.replace("&", "§"));
 
 
         } catch (SQLException e) {
@@ -51,4 +50,6 @@ public class Ban {
     public String getReason() {
         return reason;
     }
+
+
 }

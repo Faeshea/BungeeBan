@@ -2,3 +2,7 @@ name: Ban
 version: 1
 main: fr.coco.bungeeban.BungeeBan
 author: coco33920
+commands:
+  ban:
+  tfb:
+  unban:

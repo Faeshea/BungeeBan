@@ -2,57 +2,57 @@ package fr.coco.bungeeban.commands;
 
 import fr.coco.bungeeban.sql.utils.Ban;
 import fr.coco.bungeeban.sql.utils.BanUtils;
-import net.md_5.bungee.BungeeCord;
-import net.md_5.bungee.api.CommandSender;
-import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.chat.TextComponent;
-import net.md_5.bungee.api.connection.ProxiedPlayer;
-import net.md_5.bungee.api.plugin.Command;
-import net.md_5.bungee.command.ConsoleCommandSender;
+import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 
 /**
  * Created by coco33910 on 22/02/2016.
  * BanCommand
  */
-public class BanCommand extends Command {
+public class BanCommand implements CommandExecutor {
 
 
-    public BanCommand(String name) {
-        super(name);
-    }
+
+
+
+
+
+
+
+
 
     @Override
-    public void execute(CommandSender commandSender, String[] strings) {
+    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
 
-        if (commandSender instanceof ConsoleCommandSender) {
+        if (commandSender instanceof Player) {
 
+            Player player = (Player) commandSender;
 
-        } else if (commandSender instanceof ProxiedPlayer) {
-
-            ProxiedPlayer player = (ProxiedPlayer) commandSender;
-
-            if (player.hasPermission("bb.ban")) {
+            if (player.hasPermission("mod.ban")) {
 
                 if (strings.length < 3) {
-                    player.sendMessage(new TextComponent("§cError : /ban <Player> <time in hours or permanent> <Reason>"));
+                    player.sendMessage("§cError : /ban <Player> <time in hours or permanent> <Reason>");
                 } else {
-                    ProxiedPlayer target = ProxyServer.getInstance().getPlayer(strings[0]);
+                    Player target = Bukkit.getPlayer(strings[0]);
                     if (target == null) {
-                        player.sendMessage(new TextComponent("§cError : This player is offline"));
-                        return;
+                        player.sendMessage("§cError : This player is offline");
+                        return false;
                     }
                     if (target.hasPermission("bb.noban")) {
-                        player.sendMessage(new TextComponent("§cError : You can't ban this player"));
-                        return;
+                        player.sendMessage("§cError : You can't ban this player");
+                        return false;
                     }
                     if(BanUtils.getInstance().isBanned(player)){
-                        player.sendMessage(new TextComponent("§cError : This player is already banned"));
+                        player.sendMessage("§cError : This player is already banned");
                     }
                     else {
 
-                        if (strings[1].equalsIgnoreCase("permanent")) {
+                        if (strings[1].equalsIgnoreCase("permanent") || strings[1].equalsIgnoreCase("perma") || strings[1].equalsIgnoreCase("perm")) {
 
                             StringBuilder str = new StringBuilder();
                             for (int i = 2; strings.length > i; i++) {
@@ -61,6 +61,12 @@ public class BanCommand extends Command {
                             }
 
                             new Ban(target, str.toString());
+                            for(Player pla : Bukkit.getOnlinePlayers()){
+                                if(pla.isOp()){
+                                    pla.sendMessage("§4[MOD] --> §c" + player.getName() + "§4 [BAN] --> Definitif §4 --> §c" + target.getName() );
+                                }
+                            }
+
 
                         } else {
 
@@ -72,10 +78,11 @@ public class BanCommand extends Command {
 
 
             } else {
-                player.sendMessage(new TextComponent("§cError : You do not have permission to perform this command"));
+                player.sendMessage("§cError : You do not have permission to perform this command");
             }
         }
-
+        return false;
 
     }
 }
+

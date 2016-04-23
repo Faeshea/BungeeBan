@@ -1,28 +1,33 @@
 package fr.coco.bungeeban.commands;
 
 import fr.coco.bungeeban.sql.utils.BanUtils;
-import net.md_5.bungee.api.CommandSender;
-import net.md_5.bungee.api.connection.ProxiedPlayer;
-import net.md_5.bungee.api.plugin.Command;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 /**
  * Created by coco33910 on 02/03/2016.
  * TestForBan
  */
-public class TestForBan extends Command {
+public class TestForBan implements CommandExecutor {
 
 
-    public TestForBan(String tfb) {
-        super(tfb);
-    }
+
+
+
+
 
     @Override
-    public void execute(CommandSender commandSender, String[] strings) {
-
-
-        ProxiedPlayer player = (ProxiedPlayer) commandSender;
+    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+        Player player = (Player) commandSender;
         player.sendMessage(String.valueOf(BanUtils.getInstance().isBanned(player)));
+        return false;
     }
+
+
+
+
 
 
 }
