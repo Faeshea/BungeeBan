@@ -36,19 +36,19 @@ public class BanCommand implements CommandExecutor {
             if (player.hasPermission("mod.ban")) {
 
                 if (strings.length < 3) {
-                    player.sendMessage("§cError : /ban <Player> <time in hours or permanent> <Reason>");
+                    player.sendMessage("§cErreur : /ban <joueur> <durée temporaire ou permanente> <Raison du ban>.");
                 } else {
                     Player target = Bukkit.getPlayer(strings[0]);
                     if (target == null) {
-                        player.sendMessage("§cError : This player is offline");
+                        player.sendMessage("§cErreur : Ce joueur n'est pas connecté.");
                         return false;
                     }
                     if (target.hasPermission("bb.noban")) {
-                        player.sendMessage("§cError : You can't ban this player");
+                        player.sendMessage("§cErreur : Vous ne pouvez pas bannir ce joueur");
                         return false;
                     }
                     if(BanUtils.getInstance().isBanned(player)){
-                        player.sendMessage("§cError : This player is already banned");
+                        player.sendMessage("§cErreur : Ce joueur est déjà banni !");
                     }
                     else {
 
@@ -78,7 +78,7 @@ public class BanCommand implements CommandExecutor {
 
 
             } else {
-                player.sendMessage("§cError : You do not have permission to perform this command");
+                player.sendMessage("§cErreur : Vous n'avez pas la permission d'éxécuter cette commande.");
             }
         }
         return false;
